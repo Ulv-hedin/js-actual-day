@@ -11,3 +11,13 @@ const facts = [
 	'Chińczycy w ciągu roku zużywają około 80 miliardów pałeczek.',
 	'Żeby wejść na Wieżę Eiffla trzeba pokonać aż 1710 stopni.',
 ]
+
+const date = new Date()
+
+currentDay.textContent = date.toLocaleDateString('pl', { weekday: 'long' })
+
+const showFacts = () => {
+	const newFacts = Math.floor(Math.random() * facts.length)
+	funFact.textContent = facts[newFacts]
+}
+showFacts()
